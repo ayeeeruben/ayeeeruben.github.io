@@ -10,23 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 <style>
-        p,
-        header,
-        nav,
-        a,
-        footer {
-            font-family: Roboto;
-        }
 
         header {
+            font-family: Roboto;
             padding-bottom: 10px;
             margin-bottom: 0px;
             text-align: center;
+            color: white;
+            background-color: black;
         }
 
         footer {
+            font-family: Roboto;
             font-size: 13px;
-            color: rgb(16, 16, 91);
+            color: gray;
+            background-color: black;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -38,15 +36,19 @@
         }  
     
     nav {
+        font-family: Roboto;
         display: flex;
         justify-content: center;
         margin-bottom: 5%;
+        background-color: burlywood;
+        color: white;
     }
 
     a {
+        font-family: Roboto;
         margin-right: 2%;
         border-style: solid;
-        background-color: burlywood;
+        background-color: black;
         color: white;
         text-decoration: none;
         padding: 10px;
@@ -56,6 +58,16 @@
 
     a:active {
         transform: scale(0.95);
+    }
+    a:hover {
+        transform: scale(1.05);       
+    }
+
+    body{
+        font-family: Roboto;
+        background-color:darkblue;
+        color: white;
+        text-align: center;
     }
 
     .person-box {
@@ -73,10 +85,6 @@
         align-items: center;
         box-shadow: 0 0 5px rgba(0,0,0,0.5);
         transition: transform 0.2s;
-    }
-
-    .person:hover {
-        transform: scale(1.1)
     }
 
     .person-img {
@@ -107,26 +115,29 @@
     <div>
         <div class="person-box">
             <div class="person">
-                <img src="img/Josh.jpg" class="person-img">
+                <img src="images/cool.jpg" class="person-img">
                 <p>Josh</p>
             </div>
             <div class="person">
-                <img src="img/ruben.jpg" class="person-img">
+                <img src="images/ruben.jpg" class="person-img">
                 <p>Ruben</p>
             </div>
             <div class="person">
-                <img src="img/cool.jpg" class="person-img">
+                <img src="images/cats.jpeg" class="person-img">
                 <p>Aminata</p>
             </div>
         </div>
-        <hr>
         <div>
             <p>Thanks for visting our website!!</p>
+            <br>
+            <br>
+            <p> "It always seems impossible until it's done." — Nelson Mandela </p>
         </div>
 
         <hr>
 
         <footer>
+            <img src="images/csumb_logo.png" class="logo">
             <p class="footer-text">
                 CST336 Internet Programming. 2025 Joshua, Ruben, Aminata
             </p>
@@ -134,7 +145,6 @@
                 Disclaimer: The information in this webpage is fictious. It is used for academic purposes only.
             </p>
 
-            <img src="img/csumb.webp" class="logo">
         </footer>
     </div>
 
