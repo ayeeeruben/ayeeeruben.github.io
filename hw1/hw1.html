@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    header {
+        font-family: Roboto;
+        padding-bottom: 10px;
+        margin-bottom: 0px;
+        text-align: center;
+        color: white;
+        background-color: rgb(18, 18, 19);
+    }
+    body {
+        font-family: Roboto;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    button{
+        padding: 12px 24px;
+        font-size: 18px;
+        width: 150px;
+        height: 50px;
+        border-radius: 12px;
+        border: none;
+        background-color: black;
+        color: white;
+    }
+    button:hover{
+        transform: scale(1.2);
+    }
+    footer{
+        font-family: Roboto;
+        font-size: 13px;
+        color: gray;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .img_box{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 5%;
+        gap: 2%
+    }
+    .logo{
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.2s;
+        margin-top: 10px;
+    }
+
+    .home_imgs{
+        width: 150%;
+        height: 400px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+</style>
+
+
+<body>
+    <header>
+        <h1>Programming Languages</h1>
+    </header>
+    <div class="img_box">
+        <div class="logo">
+            <img src="img/cpp.png" class="home_imgs">
+            <a href="cpp.html">
+                <button> C++ </button>
+            </a>
+        </div>
+        <div class="logo">
+            <img src="img/java.png" class="home_imgs">
+            <a href="java.html">
+                <button> Java </button>
+            </a>
+        </div>
+        <div class="logo">
+            <img src="img/python.png" class="home_imgs">
+            <a href="python.html">
+                <button href="python.html"> Python </button>
+            </a>
+        </div>
+    </div>
+    <p>
+        <h3>There are many programming languages in the field of Computer Science, but this will only cover the 3
+        most important languages all Computer Science students should know such as C++, Java, and Python. All 3 are object oriented languages.
+        </h3>
+    </p>
+    
+    <footer>
+        <h6> Disclamer: This website is for educational purposes only. ---- Ruben Rivera - CSUMB Alumini </h6>
+        <img src="img/csumb_logo.png" class="logo">
+    </footer>
+
+</body>
+</html>
