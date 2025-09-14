@@ -12,7 +12,18 @@ body {
     color: white;
     text-align: center;
 }
-a{
+a.foot{
+    color: black;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 13px;
+    display: inline-block;
+    transition: transform 0.2s ease; 
+}
+a.foot:hover{
+    transform: scale(1.2); 
+}
+a.space{
     display: inline-block;
     padding: 12px 24px;
     font-size: 18px;
@@ -25,7 +36,7 @@ a{
         background-color 0.3s ease,
         color 0.3s ease;
 }
-a:hover{
+a.space:hover{
     transform: scale(1.2);
     background-color: white;
     color: black;
@@ -78,4 +89,11 @@ footer{
     height: 400px;
     object-fit: cover;
     margin-bottom: 20px;
+}
+.space_tab{
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.6;
+    text-indent: 2em;
 }
