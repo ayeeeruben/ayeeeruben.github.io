@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> GAME QUIZ</h1>
+    <label for="a1"> What is the most sold game of all time? </label>
+    <input id="a1">
+    <p id="a1-result"></p>
+
+
+
+    <input type="radio" id="battlenet" name="launchers" value="battlenet">
+    <label for="battlenet">Battlenet</label>
+
+    <input type="radio" id="steam" name="launchers" value="steam">
+    <label for="steam">Steam</label>
+
+    <input type="radio" id="epic" name="launchers" value="epic">
+    <label for="epic">Epic Games</label>
+
+    <input type="radio" id="riot" name="launchers" value="riot">
+    <label for="riot">Riot Games</label>
+
+    <p id="a2-result"></p>
+
+
+    <p>Is COD considered a fps?</p>
+    <select name="POV" id="POV">
+        <option value="o1">Yes</option>
+        <option value="o2">No</option>
+        <option value="o3">Both</option>
+    </select>
+
+    <p id="a3-result"></p>
+
+
+    <label for="numberInput">How many core games are there for Halo?</label>
+    <input type="number" id="numberInput" min="1" max="11" step="1">
+    <p id="a4-result"></p>
+    <!-- <input type="radio" id="1" name="q3-answers" value="1">
+    <label for="1">1</label>
+
+    <input type="radio" id="2" name="q3-answers" value="2">
+    <label for="2">2</label>
+
+    <input type="radio" id="3" name="q3-answers" value="3">
+    <label for="3">3</label> -->
+
+    <div id="question3-space"></div>
+
+
+    <button id="submit">Submit</button>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
