@@ -46,7 +46,7 @@ body{
     grid-column: 1 / -1; 
 }  
 .player1Side{
-    background:#fff;
+    background: white;
     border:1px solid #e5e7eb;
     border-radius:16px;
     box-shadow:0 6px 22px rgba(0,0,0,.04);
