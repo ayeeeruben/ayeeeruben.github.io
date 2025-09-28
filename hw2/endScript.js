@@ -11,12 +11,12 @@ message.textContent = `${WINNER} Has Won The Game!`;
 score.textContent = `Total Score: ${SCORE}`;
 
 mainMenuBtn.addEventListener("click", function(){
-    sessionStorage.removeItem("winner");
-    sessionStorage.removeItem("score");
+    sessionStorage.clear();
     window.location.href = "main.html";
 });
 
 playAgainBtn.addEventListener("click", function(){
-    sessionStorage.clear();
+    sessionStorage.removeItem("winner");
+    sessionStorage.removeItem("score");
     window.location.href = "game.html";
 });

@@ -11,6 +11,8 @@ let player1ScoreText = document.querySelector("#player1ScoreText");
 let player2ScoreText = document.querySelector("#player2ScoreText");
 let currentPlayer1ScoreText = document.querySelector("#currentPlayer1ScoreText");
 let currentPlayer2ScoreText = document.querySelector("#currentPlayer2ScoreText");
+let currentPlayer = document.querySelector("#currentPlayer");
+let rolled1 = document.querySelector("#rolled1");
 
 let player1Score = 0;
 let currentPlayer1Score = 0;
@@ -21,10 +23,16 @@ let isPlayerTurn = true;
 
 
 function updateUI() {
-    player1ScoreText.textContent = `${NAME1}'s Score: ${player1Score}`;
-    currentPlayer1ScoreText.textContent = `${NAME1}'s Turn: ${currentPlayer1Score}`;
-    player2ScoreText.textContent = `${NAME2}'s Score: ${player2Score}`;
-    currentPlayer2ScoreText.textContent = `${NAME2}'s Turn: ${currentPlayer2Score}`;
+    if(isPlayerTurn){
+        currentPlayer.textContent = `${NAME1}'s Turn`;
+    }
+    else{
+        currentPlayer.textContent = `${NAME2}'s Turn`; 
+    }
+    player1ScoreText.textContent = `Score: ${player1Score}`;
+    currentPlayer1ScoreText.textContent = `Turn Score: ${currentPlayer1Score}`;
+    player2ScoreText.textContent = `Score: ${player2Score}`;
+    currentPlayer2ScoreText.textContent = `Turn Score: ${currentPlayer2Score}`;
   }
   updateUI();
   
@@ -66,7 +74,10 @@ roll.addEventListener("click", function(){
 
     const value = rollDice();
     dice.textContent = DIE[value - 1];
+    rolled1.textContent = "";
     if(value === 1){
+        rolled1.textContent = "YOU ROLLED A ONE!";
+        rolled1.style.color = "red";
         if (isPlayerTurn) {
             currentPlayer1Score = 0;
           } else {

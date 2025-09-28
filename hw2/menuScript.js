@@ -12,7 +12,7 @@ startBtn.addEventListener("click", function(){
         window.location.href = "game.html";
     }
     else {
-        error.textContent = "Please enter a username!";
+        error.textContent = "Please enter both usernames!";
         error.style.color = "red";
     }
 });
