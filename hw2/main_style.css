@@ -17,10 +17,11 @@ body{
     margin:0;
     font-family: Roboto;
     color: black;
-  
+    background: url("images/bgMenu.jpg") center / cover no-repeat fixed;
     display:grid;
-    place-items:start center;
+    place-items:center;
     padding:48px 16px;
+    min-height: 80svh;
   }
   .main{
     width:100%;
@@ -55,3 +56,9 @@ body{
     border-color:#1c1fe7;
     box-shadow:0 0 0 4px rgba(99,102,241,.12);
   }
+  .rules{
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  

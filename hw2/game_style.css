@@ -17,10 +17,11 @@ body{
     margin:0;
     font-family: Roboto;
     color:black;
-    min-height:100vh;
+    min-height:80vh;
     display:grid;
     place-items:center;
     padding:24px;
+    background: url("images/gameBG.jpg") center / cover no-repeat fixed;
 }
 .gameUI{
     display: grid;
