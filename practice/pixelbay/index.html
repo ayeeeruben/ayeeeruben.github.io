@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+</head>
+<style>
+    body{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+        background-size: cover;
+        
+    }
+</style>
+<body>
+    <div class="bg">
+        <h1>Select Background</h1>
+        <div>
+            <select name="scenery" id="scenery">
+                <option>Select One</option>
+                <option>Ocean</option>
+                <option>Mountains</option>
+                <option>Space</option>
+                <option>Clouds</option>
+                <option>Flowers</option>
+            </select>
+            <button id="setBG">Set Background</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
