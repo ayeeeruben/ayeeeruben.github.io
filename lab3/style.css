@@ -1,61 +1,82 @@
-.box{
-    background-color: rgb(158, 199, 211);
-    padding: 150px;
-    align-items: center;
-    position: relative;
-}
-.quizBox{
-    text-align: relative;
-}
-.attemptBox {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-  }  
-body{
-    display: flex;
-    background-image: url("gamesBackground.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    min-height: 100vh;
-}
-h1{
-    text-align: center;
-}
-p{
-    font-size: 20px;
-}
-label{
-    font-size: 20px;
-}
-.attemptBox{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-button {
-    background-color: black;
-    color:white;
-    border-radius: 5px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    border: none;
-    padding: 6px 10px;
-    cursor: pointer;
-}
-button:hover {
-    transform: scale(1.05);
+/* ===== QUIZ CONTAINER STYLING ===== */
+.box {
+    background-color: rgb(158, 199, 211);  /* sets a light blue background color */
+    padding: 150px;                        /* adds large inner spacing around quiz content */
+    align-items: center;                   /* centers child elements vertically (for flex layouts) */
+    position: relative;                    /* allows absolutely positioned elements (like .attemptBox) inside */
 }
 
+/* ===== QUIZ TEXT AREA ===== */
+.quizBox {
+    text-align: relative;                  /* ❌ NOTE: "relative" is not valid here — should be "center" if you meant centering text */
+}
+
+/* ===== ATTEMPT COUNTER BOX ===== */
+.attemptBox {
+    position: absolute;                    /* positions this box relative to its parent (.box) */
+    top: 8px;                              /* 8px from the top edge of the parent */
+    right: 12px;                           /* 12px from the right edge of the parent */
+}
+
+/* ===== PAGE BODY STYLING ===== */
+body {
+    display: flex;                         /* uses flexbox layout to center content */
+    background-image: url("gamesBackground.jpg"); /* sets background image */
+    background-repeat: no-repeat;          /* prevents image from repeating */
+    background-size: cover;                /* scales image to cover the entire page */
+    background-position: center;           /* centers the image within the page */
+    justify-content: center;               /* centers all content horizontally */
+    align-items: center;                   /* centers all content vertically */
+    margin: 0;                             /* removes default browser margins */
+    min-height: 100vh;                     /* makes sure body fills the entire viewport height */
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    text-align: center;                    /* centers main quiz title */
+}
+
+/* ===== PARAGRAPHS ===== */
+p {
+    font-size: 20px;                       /* increases readability of question and result text */
+}
+
+/* ===== FORM LABELS ===== */
+label {
+    font-size: 20px;                       /* matches paragraph text size for consistency */
+}
+
+/* ===== DUPLICATE ATTEMPT BOX (exact same as earlier — one version is enough) ===== */
+.attemptBox {
+    position: absolute;                    /* positions relative to .box */
+    top: 10px;                             /* 10px from top */
+    right: 10px;                           /* 10px from right */
+}
+
+/* ===== BUTTON STYLING ===== */
+button {
+    background-color: black;               /* black background color */
+    color: white;                          /* white button text */
+    border-radius: 5px;                    /* slightly rounded corners */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    /* adds smooth animation for color and scale changes on hover */
+    border: none;                          /* removes default border */
+    padding: 6px 10px;                     /* adds inner padding for size and spacing */
+    cursor: pointer;                       /* shows pointer cursor on hover */
+}
+
+/* ===== BUTTON HOVER EFFECT ===== */
+button:hover {
+    transform: scale(1.05);                /* slightly enlarges the button when hovered */
+}
+
+/* ===== RESULT & SCORE TEXT STYLING ===== */
 #a1-result,
 #a2-result,
 #a3-result,
 #a4-result,
 #a5-result,
 #scoreText {
-  min-height: 1.25em;   /* ~1 line */
-  margin: 6px 0;
+  min-height: 1.25em;                      /* ensures consistent space for result text (about 1 line tall) */
+  margin: 6px 0;                           /* small vertical spacing between each result */
 }

@@ -1,43 +1,56 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: black;
+/* ===== PAGE BODY STYLING ===== */
+body {
+    display: flex;                      /* uses flexbox to arrange elements */
+    justify-content: center;            /* centers all content horizontally */
+    align-items: center;                /* centers all content vertically */
+    flex-direction: column;             /* stacks elements vertically */
+    min-height: 100vh;                  /* makes body fill full viewport height */
+    background-color: black;            /* sets the background color to black */
 }
-.game{
-    text-align: center;
-}
-.box{
-    background-color:beige;
-    padding: 150px;
-    border-radius: 10px;
-    min-width: 300px;
-    max-width: 500px;
-    position: relative
 
+/* ===== GAME CONTAINER STYLING ===== */
+.game {
+    text-align: center;                 /* centers all text inside the game container */
 }
-button{
-    background-color: black;
-    color:white;
-    border-radius: 5px;
+
+/* ===== BOX (MAIN GAME AREA) ===== */
+.box {
+    background-color: beige;            /* sets a light beige background */
+    padding: 150px;                     /* large inner spacing around the content */
+    border-radius: 10px;                /* slightly rounds the box corners */
+    min-width: 300px;                   /* sets the smallest allowed width */
+    max-width: 500px;                   /* limits the box from getting too wide */
+    position: relative;                 /* enables absolutely positioned children inside */
+}
+
+/* ===== BUTTON STYLING ===== */
+button {
+    background-color: black;            /* sets button background to black */
+    color: white;                       /* makes button text white */
+    border-radius: 5px;                 /* slightly rounds button corners */
     transition: background-color 0.2s ease, transform 0.2s ease;
-    border: none;
-    padding: 6px 10px;
-    cursor: pointer;
+    /* adds smooth transitions for hover effects (color and size) */
+    border: none;                       /* removes the default border */
+    padding: 6px 10px;                  /* adds internal spacing */
+    cursor: pointer;                    /* shows pointer cursor when hovering */
 }
+
+/* ===== BUTTON HOVER EFFECT ===== */
 button:hover {
-    transform: scale(1.05);
+    transform: scale(1.05);             /* slightly enlarges button on hover */
 }
-.stats{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 15px;
-    font-weight: bold;
+
+/* ===== GAME STATS DISPLAY (TOP-RIGHT CORNER) ===== */
+.stats {
+    position: absolute;                 /* positions element relative to its parent (.box) */
+    top: 10px;                          /* 10px from the top of the box */
+    right: 10px;                        /* 10px from the right side of the box */
+    display: flex;                      /* lays out stat elements in a row */
+    gap: 15px;                          /* adds spacing between each stat item */
+    font-weight: bold;                  /* makes stat text bold */
 }
+
+/* Removes extra space around headings inside .stats */
 .stats h5 {
-    margin: 0;
+    margin: 0;                          /* removes default margins from h5 elements */
 }

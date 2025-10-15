@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Work — Portfolio</title>
+  <meta name="description" content="A modern, simple portfolio to showcase projects with images, descriptions, and GitHub links." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ======= Nav ======= -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#home">
+        <img class="brand-logo" src="img/messiWC.jpg" alt="Logo">
+        <abbr title="Your Name">Ruben Rivera</abbr>
+      </a>
+      <nav class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="https://github.com/ayeeeruben/classwork-history/tree/main/classwork-history" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= Hero ======= -->
+  <main id="home" class="section hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Hello — Welcome to my portfolio</span>
+        <h1 class="title">Showcasing All My Work.<br/> For People to See.</h1>
+        <p class="subtitle">A curated collection of projects from previous years. Each project includes visuals, a short description, and links to repositories and maybe a little demo.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">See Projects</a>
+          <button id="themeToggle" class="btn ghost" type="button">Toggle Theme</button>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <a href="https://docs.google.com/presentation/d/1vdgdGglf_dsrUOhhzYO1ONSEebvP2lCqn58hOy4MLdo/edit?slide=id.p#slide=id.p" target="_blank" rel="noopener">
+          <img class="hero-thumb" src="img/bjPres.jpg" alt="Featured project" />
+        </a>
+        <small>The Presentation to my CST338 - Intro to Software Engineering Class</small>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ======= Projects ======= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <div id="filters" class="filters"></div>
+      </div>
+      <div id="projectGrid" class="grid"></div>
+    </div>
+  </section>
+
+  <!-- ======= About ======= -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <p class="subtitle">I'm a CS student at CSUMB. I love Soccer, Video Games, and Music. Programming is always something ive been intrested in and being able to study CS has been an amazing journey.
+        I am fluent in C++, Python, Java, HTML, CSS, and JavaScript. While having aquired skills such as building and coding arduinos, using Assembly language, building apps on Andriod Studio, using APIs, documenting class diagrams
+        and use-cases, and communicating and working in a team.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======= Contact ======= -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="subtitle">Want to Contact me? Feel free! <a href="marinez.ruben210@gmail.com" class="link">marinez.ruben210@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="foot">
+      <span>© <span id="year"></span> Ruben Rivera</span>
+      <span>Built with ♥ — <a href="https://github.com/ayeeeruben" target="_blank">GitHub</a></span>
+    </div>
+  </footer>
+
+  <dialog id="viewer">
+    <div class="viewer-head">
+      <strong id="viewerTitle">Preview</strong>
+      <button id="viewerClose" class="x">✕</button>
+    </div>
+    <div class="viewer-body">
+      <img id="viewerImg" class="viewer-img" src="" alt="">
+      <p id="viewerCaption" class="card-meta"></p>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

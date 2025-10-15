@@ -1,0 +1,72 @@
+header{
+    text-align: center;
+}
+body{
+    text-align: center;
+    font-family: roboto;
+    background-color: black;
+    color:white
+}
+button {
+    background: rgb(68, 61, 61);   /* sets a dark gray background color */
+    color: white;                  /* makes button text white */
+    border-radius: 12px;           /* rounds button corners */
+    border: none;                  /* removes default border */
+    padding: 8px 16px;            /* adds internal spacing around text */
+    cursor: pointer;               /* changes cursor to hand icon when hovering */
+    margin-top: 16px;              /* adds space above button */
+    transition: transform .2s ease;/* smooth scale animation when hovering */
+    box-sizing: border-box;        /* includes padding in total button size */
+}
+
+/* ===== Button Hover Effect ===== */
+button:hover {
+    transform: scale(1.05);        /* enlarges the button slightly when hovered */
+}
+
+#a1,
+#a2,
+#a3,
+#a4{
+    display: inline-block;                /* displays links horizontally */
+    padding: 12px 24px;                   /* internal padding for size and spacing */
+    font-size: 18px;                      /* sets font size larger than footer links */
+    border-radius: 12px;                  /* rounded edges on link background */
+    border: 3px solid currentColor;                          /* placeholder border width (no color specified) */
+    background-color: rgb(84, 181, 24);              /* sets background to black */
+    color: white;                         /* makes text white */
+    text-decoration: none;                /* removes underline */
+    transition: transform 0.2s ease,      /* adds smooth grow animation on hover */
+                background-color 0.3s ease, /* smooth background color change */
+                color 0.3s ease;          /* smooth text color transition */
+}
+#a1:hover,#a2:hover,#a3:hover,#a4:hover {
+    transform: scale(1.2);                /* enlarges slightly when hovered */
+    background-color: white;              /* flips background to white */
+    color: black;                         /* flips text to black */
+}
+
+.video-section iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    border-radius: 10px; /* optional for rounded corners */
+  }
+
+  .video-section {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .video-section iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }

@@ -12,9 +12,9 @@ pageLoad();
 
 let quoteText = document.querySelector("#quote");
 let changeQuoteBtn = document.querySelector("#changeQuoteBtn");
-changeQuoteBtn.addEventListener("click", chnageQuote);
-function chnageQuote(){
-    quoteText.textContent = qData.quoteText;
+changeQuoteBtn.addEventListener("click", changeQuote);
+function changeQuote(){
+    quoteText.textContent = `"${qData.quoteText}" - ${qData.firstName} ${qData.lastName}`;
     console.log(quoteText); 
 }
 
@@ -34,7 +34,33 @@ async function changeBG(){
     console.log(bgData);
     console.log(bgData.urls.full)
     document.querySelector("body").style.backgroundImage = `url(${bgData.urls.full})`;
-    console.log(bgData.urls.regular)
+    console.log(bgData.urls.regular);
 }
 changeBG();
+
+let numOfQuotes = document.querySelector("#numOfQuotes");
+let container = document.querySelector(".quotes");
+let getQuotesBtn = document.querySelector("#getQuotesBtn");
+
+getQuotesBtn.addEventListener("click", displayNumOfQuotes);
+
+async function displayNumOfQuotes(){
+    const n = Number(numOfQuotes.value);
+    if(n < 1 || n > 5 || n == ""){
+        document.querySelector("#getQuotesError").textContent = "Please choose a value between 1 and 5";
+        document.querySelector("#getQuotesError").style.color = "red";
+        container.innerHTML = ""; 
+        return;
+    }
+    let response = await fetch("https://csumb.space/api/famousQuotes/getQuotes.php?n=" + numOfQuotes.value);
+    let data = await response.json();
+    console.log(data);
+    document.querySelector("#getQuotesError").textContent = "";
+    container.innerHTML = "";
+    for(let i = 0; i < numOfQuotes.value; i++){
+        let p = document.createElement("p");
+        p.textContent = `"${data[i].quoteText}" — ${data[i].firstName} ${data[i].lastName}`;
+        container.appendChild(p);
+    }
+}
 

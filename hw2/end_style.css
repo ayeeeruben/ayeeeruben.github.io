@@ -1,40 +1,54 @@
-body{
+/* ===== PAGE BACKGROUND ===== */
+body {
     background: url("images/endBG3.jpg") center / cover no-repeat fixed;
+    /* sets a full-screen background image:
+       - centered on the screen
+       - scaled to cover the entire viewport
+       - does not repeat
+       - stays fixed while scrolling */
 }
-.box{
-    margin:0;
-    font-family: Roboto;
-    color:black;
-    height:80svh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:24px;
-    font-size: 18px;
+
+/* ===== MAIN CONTAINER (CENTERED BOX) ===== */
+.box {
+    margin: 0;                            /* removes default outer spacing */
+    font-family: Roboto;                  /* applies Roboto font to text */
+    color: black;                         /* sets text color to black */
+    height: 80svh;                        /* makes box height 80% of the small viewport height */
+    display: flex;                        /* enables flexbox for centering */
+    flex-direction: column;               /* stacks children vertically */
+    align-items: center;                  /* centers content horizontally */
+    justify-content: center;              /* centers content vertically */
+    text-align: center;                   /* centers text lines */
+    padding: 24px;                        /* inner spacing between content and box edges */
+    font-size: 18px;                      /* increases base text size for readability */
 }
-button{
-    background:rgb(24, 24, 24);
-    color:white;
-    border-radius:12px;
-    border:none;
-    padding:12px 16px;
-    cursor:pointer;
-    transition:transform .2s ease;
-    box-sizing:border-box;
-    margin-top:0;
-    display:inline-block;
-    width:auto;
-    min-width:200px;
-    margin:12px 8px 0;
+
+/* ===== BUTTON STYLING ===== */
+button {
+    background: rgb(24, 24, 24);          /* dark gray background color */
+    color: white;                         /* white text for contrast */
+    border-radius: 12px;                  /* rounded button corners */
+    border: none;                         /* removes default border */
+    padding: 12px 16px;                   /* adds space inside the button */
+    cursor: pointer;                      /* changes cursor to pointer on hover */
+    transition: transform .2s ease;       /* smooth animation when scaling on hover */
+    box-sizing: border-box;               /* includes padding in total width/height */
+    margin-top: 0;                        /* removes default top margin */
+    display: inline-block;                /* allows buttons to sit side by side */
+    width: auto;                          /* adjusts button width to fit content */
+    min-width: 200px;                     /* ensures button is at least 200px wide */
+    margin: 12px 8px 0;                   /* adds space: 12px top, 8px sides, 0 bottom */
 }
+
+/* Hover effect for buttons */
 button:hover {
-    transform: scale(1.05);
+    transform: scale(1.05);               /* slightly enlarges button on hover */
 }
-.buttons{
-    display:flex;
-    gap:16px;
-    justify-content:center;
-    flex-wrap:wrap; 
+
+/* ===== BUTTON GROUP CONTAINER ===== */
+.buttons {
+    display: flex;                        /* arranges multiple buttons in a row */
+    gap: 16px;                            /* space between buttons */
+    justify-content: center;              /* centers button group horizontally */
+    flex-wrap: wrap;                      /* allows buttons to wrap to next line if needed */
 }

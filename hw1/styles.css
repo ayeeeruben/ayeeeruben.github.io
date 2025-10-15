@@ -1,100 +1,123 @@
+/* ===== HEADER STYLING ===== */
 header {
-    font-family: Roboto;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    text-align: center;
-    color: white;
-    background-color: rgb(18, 18, 19);
-}
-body {
-    font-family: Roboto;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-a.foot{
-    display: inline-block;
-    color: black;
-    text-decoration: none;
-    padding: 12px 24px;
-    font-size: 13px;
-    display: inline-block;
-    transition: transform 0.2s ease; 
-}
-a.foot:hover{
-    transform: scale(1.2); 
-}
-a.space{
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 18px;
-    border-radius: 12px;
-    border: 3px;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    transition: transform 0.2s ease,
-        background-color 0.3s ease,
-        color 0.3s ease;
-}
-a.space:hover{
-    transform: scale(1.2);
-    background-color: white;
-    color: black;
-}
-footer{
-    font-family: Roboto;
-    font-size: 13px;
-    color: gray;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.img_box{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 5%;
-    gap: 2%
-}
-.img_box2{
-    display: flex;
-    justify-content: center;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 5%;
-    gap: 2%
-}
-.logo{
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s;
-    margin-top: 10px;
-}
-.logo2{
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s;
-    margin-top: 10px;
+    font-family: Roboto;                  /* uses Roboto font for text */
+    padding-bottom: 0px;                  /* removes extra space below header content */
+    margin-bottom: 0px;                   /* removes space below the header element */
+    text-align: center;                   /* centers header text horizontally */
+    color: white;                         /* sets text color to white */
+    background-color: rgb(18, 18, 19);    /* sets dark gray/black background color */
 }
 
-.home_imgs{
-    width: 150%;
-    height: 400px;
-    object-fit: cover;
-    margin-bottom: 20px;
+/* ===== BODY STYLING ===== */
+body {
+    font-family: Roboto;                  /* applies Roboto font to all page text */
+    background-color: black;              /* sets entire page background to black */
+    color: white;                         /* makes all text white by default */
+    text-align: center;                   /* centers most inline text elements */
 }
-.space_tab{
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center;
-    line-height: 1.6;
-    text-indent: 2em;
+
+/* ===== FOOTER LINKS (class="foot") ===== */
+a.foot {
+    display: inline-block;                /* allows block properties but still inline */
+    color: black;                         /* sets text color to black */
+    text-decoration: none;                /* removes underline from links */
+    padding: 12px 24px;                   /* adds spacing around link text */
+    font-size: 13px;                      /* sets smaller font size */
+    transition: transform 0.2s ease;      /* smooth scaling animation on hover */
+}
+
+/* Hover effect for footer links */
+a.foot:hover {
+    transform: scale(1.2);                /* enlarges the link slightly when hovered */
+}
+
+/* ===== MAIN NAVIGATION LINKS (class="space") ===== */
+a.space {
+    display: inline-block;                /* displays links horizontally */
+    padding: 12px 24px;                   /* internal padding for size and spacing */
+    font-size: 18px;                      /* sets font size larger than footer links */
+    border-radius: 12px;                  /* rounded edges on link background */
+    border: 3px;                          /* placeholder border width (no color specified) */
+    background-color: black;              /* sets background to black */
+    color: white;                         /* makes text white */
+    text-decoration: none;                /* removes underline */
+    transition: transform 0.2s ease,      /* adds smooth grow animation on hover */
+                background-color 0.3s ease, /* smooth background color change */
+                color 0.3s ease;          /* smooth text color transition */
+}
+
+/* Hover effect for navigation links */
+a.space:hover {
+    transform: scale(1.2);                /* enlarges slightly when hovered */
+    background-color: white;              /* flips background to white */
+    color: black;                         /* flips text to black */
+}
+
+/* ===== FOOTER STYLING ===== */
+footer {
+    font-family: Roboto;                  /* uses same font for consistency */
+    font-size: 13px;                      /* sets smaller footer text size */
+    color: gray;                          /* uses gray for text color */
+    background-color: white;              /* white footer background */
+    display: flex;                        /* enables flexbox layout */
+    flex-direction: column;               /* stacks footer items vertically */
+    align-items: center;                  /* centers items horizontally */
+    justify-content: center;              /* centers items vertically */
+}
+
+/* ===== IMAGE BOXES (ROW OF IMAGES) ===== */
+.img_box {
+    display: flex;                        /* enables flex layout to align images in a row */
+    justify-content: space-between;       /* spreads images evenly across container */
+    margin-left: 15%;                     /* adds spacing from left edge of page */
+    margin-right: 15%;                    /* adds spacing from right edge of page */
+    margin-bottom: 5%;                    /* space below the image row */
+    gap: 2%;                              /* small spacing between images */
+}
+
+/* ===== CENTERED IMAGE BOX (SECOND ROW) ===== */
+.img_box2 {
+    display: flex;                        /* enables flexbox layout */
+    justify-content: center;              /* centers images in the middle of container */
+    margin-left: 15%;                     /* left margin for layout balance */
+    margin-right: 15%;                    /* right margin for layout balance */
+    margin-bottom: 5%;                    /* space below image row */
+    gap: 2%;                              /* space between images */
+}
+
+/* ===== LOGO IMAGE STYLING ===== */
+.logo {
+    width: 200px;                         /* sets fixed width for logo images */
+    display: flex;                        /* allows content alignment inside logo */
+    flex-direction: column;               /* stacks internal logo items vertically */
+    align-items: center;                  /* centers logo content horizontally */
+    transition: transform 0.2s;           /* enables smooth hover scaling */
+    margin-top: 10px;                     /* adds small space above the logo */
+}
+
+/* Larger logo variant */
+.logo2 {
+    width: 400px;                         /* larger width for alternate logos */
+    display: flex;                        /* flexbox layout */
+    flex-direction: column;               /* vertical stacking */
+    align-items: center;                  /* centers horizontally */
+    transition: transform 0.2s;           /* smooth scaling effect */
+    margin-top: 10px;                     /* small top spacing */
+}
+
+/* ===== HOME PAGE IMAGES ===== */
+.home_imgs {
+    width: 150%;                          /* slightly oversized to fill container */
+    height: 400px;                        /* fixed image height */
+    object-fit: cover;                    /* crops and fills without distortion */
+    margin-bottom: 20px;                  /* adds spacing below each image */
+}
+
+/* ===== TEXT BLOCK FOR "SPACE" TAB SECTION ===== */
+.space_tab {
+    margin: 20px auto;                    /* centers block and adds vertical margin */
+    max-width: 800px;                     /* limits maximum text width for readability */
+    text-align: center;                   /* centers text horizontally */
+    line-height: 1.6;                     /* increases spacing between lines */
+    text-indent: 2em;                     /* indents the first line of each paragraph */
 }

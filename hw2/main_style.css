@@ -1,63 +1,81 @@
-  button{
-    background:rgb(24, 24, 24);
-    color:white;
-    border-radius:12px;
-    border:none;
-    padding:12px 16px;
-    cursor:pointer;
-    width:100%;
-    margin-top:16px;
-    transition:transform .2s ease;
-    box-sizing:border-box;
+/* Style for all buttons on the page */
+button {
+  background: rgb(24, 24, 24);       /* dark gray/black background color */
+  color: white;                      /* white text color */
+  border-radius: 12px;               /* rounded corners */
+  border: none;                      /* removes default button border */
+  padding: 12px 16px;                /* adds space inside the button (top/bottom, left/right) */
+  cursor: pointer;                   /* changes cursor to hand when hovering */
+  width: 100%;                       /* makes the button take the full width of its container */
+  margin-top: 16px;                  /* adds space above the button */
+  transition: transform .2s ease;    /* smooth animation when scaling on hover */
+  box-sizing: border-box;            /* ensures padding is included in total width */
 }
+
+/* Button hover effect */
 button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);            /* slightly enlarges button when hovered */
 }
-body{
-    margin:0;
-    font-family: Roboto;
-    color: black;
-    background: url("images/bgMenu.jpg") center / cover no-repeat fixed;
-    display:grid;
-    place-items:center;
-    padding:48px 16px;
-    min-height: 80svh;
-  }
-  .main{
-    width:100%;
-    max-width:720px;
-    background:white;
-    border:1px solid black;
-    border-radius:16px;
-    box-shadow:0 8px 30px rgba(0,0,0,.06);
-    padding:32px;
-  }
-  .intro{
-    text-align:center;
-    margin:0 0 20px;
-  }
-  label{
-    display:block;
-    font-weight:600;
-    margin:18px 0 12px;
-    color:black;
-  }
-  input{
-    width:100%;
-    padding:12px 14px;
-    border:1px solid black;
-    border-radius:12px;
-    background:white;
-    outline:none;
-    transition:border-color .2s, box-shadow .2s;
-    box-sizing:border-box;
-  }
-  input:focus{
-    border-color:#1c1fe7;
-    box-shadow:0 0 0 4px rgba(99,102,241,.12);
-  }
-  .rules{
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
+
+/* Style for the entire page */
+body {
+  margin: 0;                         /* removes default browser margins */
+  font-family: Roboto;               /* sets the text font */
+  color: black;                      /* sets default text color */
+  background: url("images/bgMenu.jpg") center / cover no-repeat fixed; 
+  /* sets a background image, centered, covers full area, fixed in place */
+  display: grid;                     /* uses CSS Grid layout */
+  place-items: center;               /* centers content both vertically and horizontally */
+  padding: 48px 16px;                /* adds space around the content */
+  min-height: 80svh;                 /* ensures body is at least 80% of the viewport height */
+}
+
+/* Container for the main content */
+.main {
+  width: 100%;                       /* takes full width of its parent (within limits) */
+  max-width: 720px;                  /* limits container width to 720px */
+  background: white;                 /* white background color */
+  border: 1px solid black;           /* thin black border around the box */
+  border-radius: 16px;               /* rounded corners */
+  box-shadow: 0 8px 30px rgba(0,0,0,.06); /* subtle drop shadow */
+  padding: 32px;                     /* inner spacing between content and edges */
+}
+
+/* Section for intro text */
+.intro {
+  text-align: center;                /* centers text horizontally */
+  margin: 0 0 20px;                  /* no margin on top/sides, 20px bottom margin */
+}
+
+/* Label styling for form inputs */
+label {
+  display: block;                    /* makes labels take up full line width */
+  font-weight: 600;                  /* makes label text slightly bold */
+  margin: 18px 0 12px;               /* top 18px, sides 0, bottom 12px spacing */
+  color: black;                      /* sets label text color */
+}
+
+/* Input field styling */
+input {
+  width: 100%;                       /* input takes full width of container */
+  padding: 12px 14px;                /* inner padding for comfortable text spacing */
+  border: 1px solid black;           /* thin black border */
+  border-radius: 12px;               /* rounded corners */
+  background: white;                 /* white background */
+  outline: none;                     /* removes default focus outline */
+  transition: border-color .2s, box-shadow .2s; /* smooth transition for focus effects */
+  box-sizing: border-box;            /* ensures padding and border are included in total width */
+}
+
+/* Input focus effect (when clicked/active) */
+input:focus {
+  border-color: #1c1fe7;             /* changes border color to blue when focused */
+  box-shadow: 0 0 0 4px rgba(99,102,241,.12); /* adds soft blue glow effect */
+}
+
+/* Flexbox layout for "rules" section */
+.rules {
+  display: flex;                     /* uses flexbox layout */
+  align-items: center;               /* vertically centers items */
+  gap: 8px;                          /* space between items inside the flexbox */
+}

@@ -1,77 +1,100 @@
-button{
-    background:rgb(24, 24, 24);
-    color:white;
-    border-radius:12px;
-    border:none;
-    padding:12px 16px;
-    cursor:pointer;
-    width:100%;
-    margin-top:16px;
-    transition:transform .2s ease;
-    box-sizing:border-box;
+/* ===== BUTTON STYLING ===== */
+button {
+    background: rgb(24, 24, 24);          /* dark background color for the button */
+    color: white;                         /* white text for good contrast */
+    border-radius: 12px;                  /* rounded corners for a softer look */
+    border: none;                         /* removes default browser border */
+    padding: 12px 16px;                   /* inner spacing (top/bottom, left/right) */
+    cursor: pointer;                      /* shows a pointer cursor on hover */
+    width: 100%;                          /* button stretches to fill its container width */
+    margin-top: 16px;                     /* adds space above each button */
+    transition: transform .2s ease;       /* smooth scaling animation on hover */
+    box-sizing: border-box;               /* includes padding/border in element’s total width */
 }
+
+/* Hover effect for buttons */
 button:hover {
-    transform: scale(1.05);
+    transform: scale(1.05);               /* enlarges button slightly when hovered */
 }
-body{
-    margin:0;
-    font-family: Roboto;
-    color:black;
-    min-height:80vh;
-    display:grid;
-    place-items:center;
-    padding:24px;
+
+/* ===== PAGE LAYOUT ===== */
+body {
+    margin: 0;                            /* removes default browser margins */
+    font-family: Roboto;                  /* applies the Roboto font for text */
+    color: black;                         /* sets default text color */
+    min-height: 80vh;                     /* ensures body is at least 80% of the viewport height */
+    display: grid;                        /* enables grid layout for easy centering */
+    place-items: center;                  /* centers all content horizontally & vertically */
+    padding: 24px;                        /* space between content and edges of viewport */
     background: url("images/gameBG.jpg") center / cover no-repeat fixed;
+    /* sets a centered, full-screen, fixed background image */
 }
-.gameUI{
-    display: grid;
+
+/* ===== MAIN GAME UI LAYOUT ===== */
+.gameUI {
+    display: grid;                        /* uses CSS grid for structured layout */
     grid-template-columns: 1fr minmax(240px, 320px) 1fr;
-    gap: 24px;
-    align-items: start;
-    width: 100%;
-    max-width: 1100px;
+    /* creates 3 columns: left flexible, middle fixed size, right flexible */
+    gap: 24px;                            /* spacing between columns */
+    align-items: start;                   /* aligns items to the top of their grid areas */
+    width: 100%;                          /* makes the grid take full width available */
+    max-width: 1100px;                    /* limits total width for readability */
 }
-.diceSide{
-    display: grid;
-    align-items: center;
-    gap: 12px;
-    padding-top:8px;
-    grid-template-columns: 1fr 1fr;
-    justify-items: stretch;
-  }
-#dice{ 
-    font-size: 150px;
-    line-height: 1; 
-    text-align: center;
-    grid-column: 1 / -1; 
-}  
-.player1Side{
-    background: white;
-    border:1px solid #e5e7eb;
-    border-radius:16px;
-    box-shadow:0 6px 22px rgba(0,0,0,.04);
-    padding:18px 20px;
-    font-size: 1.125rem;
+
+/* ===== DICE AREA STYLING ===== */
+.diceSide {
+    display: grid;                        /* uses grid to organize dice and buttons */
+    align-items: center;                  /* vertically centers elements in each cell */
+    gap: 12px;                            /* spacing between grid items */
+    padding-top: 8px;                     /* space above the dice section */
+    grid-template-columns: 1fr 1fr;       /* two equal-width columns for layout */
+    justify-items: stretch;               /* makes each item fill its column width */
 }
-.player2Side{
-    background:#fff;
-    border:1px solid #e5e7eb;
-    border-radius:16px;
-    box-shadow:0 6px 22px rgba(0,0,0,.04);
-    padding:18px 20px;
-    font-size: 1.125rem;
+
+/* Big dice number display */
+#dice { 
+    font-size: 150px;                     /* very large text for the dice number */
+    line-height: 1;                       /* tight line height for better alignment */
+    text-align: center;                   /* centers the dice number horizontally */
+    grid-column: 1 / -1;                  /* spans both columns in the grid */
 }
-p{
-margin:8px 0;
+
+/* ===== PLAYER 1 PANEL ===== */
+.player1Side {
+    background: white;                    /* white background for clarity */
+    border: 1px solid #e5e7eb;            /* light gray border around the box */
+    border-radius: 16px;                  /* smooth rounded corners */
+    box-shadow: 0 6px 22px rgba(0,0,0,.04); /* subtle shadow for depth */
+    padding: 18px 20px;                   /* inner spacing around content */
+    font-size: 1.125rem;                  /* slightly larger text size */
 }
-#currentPlayer{
-    grid-column: 1 / -1;
-    text-align: center;
-    margin: 0 0 12px;
+
+/* ===== PLAYER 2 PANEL ===== */
+.player2Side {
+    background: #fff;                     /* same white background as player 1 */
+    border: 1px solid #e5e7eb;            /* same border style */
+    border-radius: 16px;                  /* same rounded corners */
+    box-shadow: 0 6px 22px rgba(0,0,0,.04); /* same light shadow for consistency */
+    padding: 18px 20px;                   /* consistent inner spacing */
+    font-size: 1.125rem;                  /* same font size */
 }
-#rolled1{
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-top: 12px;
-    min-height: 24px; 
+
+/* ===== PARAGRAPH TEXT ===== */
+p {
+    margin: 8px 0;                        /* small vertical space above and below paragraphs */
+}
+
+/* ===== CURRENT PLAYER LABEL ===== */
+#currentPlayer {
+    grid-column: 1 / -1;                  /* spans across full grid width */
+    text-align: center;                   /* centers text */
+    margin: 0 0 12px;                     /* no top margin, 12px space below */
+}
+
+/* ===== MESSAGE WHEN A 1 IS ROLLED ===== */
+#rolled1 {
+    grid-column: 1 / -1;                  /* spans across all columns */
+    text-align: center;                   /* centers message */
+    margin-top: 12px;                     /* space above the message */
+    min-height: 24px;                     /* reserves space so layout doesn’t jump when text appears */
 }
